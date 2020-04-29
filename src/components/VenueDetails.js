@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {fetchDetails} from '../actions/venueActions'
 import Map from './Map'
 import {Link} from 'react-router-dom'
-import '../App.css';
+import '../index.scss';
 //font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
@@ -46,7 +46,7 @@ export default function VenueDetails(props) {
                     {venueDetails.bestPhoto && <img className="hero" src={venueDetails.bestPhoto.prefix + '900x700' + venueDetails.bestPhoto.suffix}/>}
                     <div className="details-info">
                         <h3>{venueDetails.name}</h3>
-                        <a className="social" href={venueDetails.url}>{venueDetails.url}</a><br/>
+                        <a href={venueDetails.url}>{venueDetails.url}</a><br/>
                         {venueDetails.name &&  <>
                         {venueDetails.location.formattedAddress[0]}
                         {venueDetails.location.crossStreet}</>}
